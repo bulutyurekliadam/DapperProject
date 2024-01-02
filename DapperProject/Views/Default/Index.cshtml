@@ -1,0 +1,42 @@
+﻿@model List<DapperProject.Dtos.ResultCoursesDto>
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <table class="table table-hover">
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Fiyat</th>
+            <th>Süre</th>
+            <th>Resim</th>
+            <th>Kategori ID</th>
+            <th>Eğitmen ID</th>
+            <th>Kurs Açıklaması </th>
+            <th>Sil </th>
+            <th>Güncelle</th>
+
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CourseID</td>
+                <td>@item.Title</td>
+                <td>@item.Price</td>
+                <td>@item.Duration</td>
+                <td>@item.ImageUrl</td>
+                <td>@item.CategoryID</td>
+                <td>@item.InstructorID</td>
+                <td>@item.CourseDescription</td>
+                <td><a href ="/Default/DeleteCourse/@item.CourseID" class="btn btn-danger">Sil</a></td>
+                <td><a href ="/Default/UpdateCourse/@item.CourseID" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Default/CreateCourse/" class="btn btn-info">Yeni Kurs Girişi</a>
+
+</div>

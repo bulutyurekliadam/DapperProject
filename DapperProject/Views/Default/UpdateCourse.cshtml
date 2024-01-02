@@ -1,0 +1,37 @@
+﻿@model DapperProject.Dtos.UpdateCourseDto
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+<div class=" container">
+    <br /><br />
+    <form method="post">
+        <label>Kurs ID </label>
+        <input type ="text" asp-for="CourseID" class="form-control" />
+        <br />
+        <label>Kurs Adı </label>
+        <input type="text" asp-for="Title" class=" form-control" />
+        <br />
+        <label>Kurs Fiyatı </label>
+        <input type="text" asp-for="Price" class=" form-control" />
+        <br />
+        <label>Kurs Süresi</label>
+        <input type="text" asp-for="Duration" class=" form-control" />
+        <br />
+        <label>Kursun Resmi </label>
+        <input type="text" asp-for="ImageUrl" class=" form-control" />
+        <br />
+        <label>Kategori ID</label>
+        <input type="text" asp-for="CategoryID" class=" form-control" />
+        <br />
+        <label>Eğitmen ID</label>
+        <input type="text" asp-for="InstructorID" class=" form-control" />
+        <br />
+        <label>Kursun Açıklaması</label>
+        <input type="text" asp-for="CourseDescription" class=" form-control" />
+        <br />
+        <button class="btn btn-primary">Kursu Güncelle</button>
+    </form>
+
+</div>
